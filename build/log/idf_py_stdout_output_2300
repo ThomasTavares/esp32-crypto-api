@@ -1,0 +1,418 @@
+�J��ѹesp32: SPI�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 12 2025 18:00:02[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot:  3 littlefs         Unknown data     01 83 00110000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=289a8h (166312) map[0m
+[0;32mI (153) esp_image: segment 1: paddr=000389d0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (153) esp_image: segment 2: paddr=000389f4 vaddr=3ffb0000 size=02414h (  9236) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=0003ae10 vaddr=40080000 size=05208h ( 21000) load[0m
+[0;32mI (173) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=532a8h (340648) map[0m
+[0;32mI (289) esp_image: segment 5: paddr=000932d0 vaddr=40085208 size=08438h ( 33848) load[0m
+[0;32mI (309) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (309) boot: Disabling RNG early entropy source...[0m
+[0;32mI (320) cpu_start: Multicore app[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (328) app_init: Application information:[0m
+[0;32mI (328) app_init: Project name:     CryptoAPI[0m
+[0;32mI (332) app_init: App version:      1[0m
+[0;32mI (336) app_init: Compile time:     Jun 12 2025 17:59:45[0m
+[0;32mI (341) app_init: ELF file SHA256:  287f53fea...[0m
+[0;32mI (345) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (349) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (353) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (357) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (361) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (367) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (372) heap_init: At 3FFB2F68 len 0002D098 (180 KiB): DRAM[0m
+[0;32mI (377) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (383) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (388) heap_init: At 4008D640 len 000129C0 (74 KiB): IRAM[0m
+[0;32mI (395) spi_flash: detected chip: generic[0m
+[0;32mI (397) spi_flash: flash io: dio[0m
+[0;32mI (401) main_task: Started on CPU0[0m
+[0;32mI (411) main_task: Calling app_main()[0m
+---------- Beggining operation 1 ----------I (411) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (421) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (421) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (1091) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (1091) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (1091) CryptoApiCommons: gen_keys clock cycle count: 106337891[0m
+[0;32mI (1091) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (1101) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (1101) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (1781) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (1781) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (1781) CryptoApiCommons: sign clock cycle count: 107099735[0m
+[0;32mI (1781) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (1781) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (1791) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (3081) CryptoApiCommons: [0m
+
+verify time: 1282 ms
+[0;32mI (3081) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (3081) CryptoApiCommons: verify clock cycle count: 205161559[0m
+[0;32mI (3081) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (3081) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (3091) Main: Finished status: 0[0m
+---------- Beggining operation 2 ----------I (3091) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (3111) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (3111) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (3781) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (3781) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (3781) CryptoApiCommons: gen_keys clock cycle count: 106273989[0m
+[0;32mI (3781) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (3791) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (3791) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (4471) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (4471) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (4471) CryptoApiCommons: sign clock cycle count: 107080647[0m
+[0;32mI (4471) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (4471) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (4481) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[1;31mE (5411) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (5411) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (5411) task_wdt: Tasks currently running:[0m
+[1;31mE (5411) task_wdt: CPU 0: main[0m
+[1;31mE (5411) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (5411) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40106516:0x3FFB1040 0x4010692C:0x3FFB1060 0x40082F81:0x3FFB1090 0x40120A47:0x3FFB39E0 0x40100456:0x3FFB3A00 0x401005BC:0x3FFB3A50 0x401006D9:0x3FFB3A70 0x40102939:0x3FFB3A90 0x40102C59:0x3FFB3AB0 0x40102F6B:0x3FFB3AD0 0x40100649:0x3FFB3F70 0x400E2116:0x3FFB3F90 0x400E312C:0x3FFB3FC0 0x400E32A1:0x3FFB3FE0 0x400E3408:0x3FFB4040 0x400E3609:0x3FFB40A0 0x400E3B2B:0x3FFB40F0 0x400E3C5C:0x3FFB4160 0x400D8BE5:0x3FFB4190 0x4011F552:0x3FFB41F0 0x400D7F74:0x3FFB4210 0x400D7F9F:0x3FFB4240 0x40122BE3:0x3FFB4260 0x40086985:0x3FFB4290
+
+[0;32mI (5831) CryptoApiCommons: [0m
+
+verify time: 1346 ms
+[0;32mI (5831) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (5831) CryptoApiCommons: verify clock cycle count: 215349367[0m
+[0;32mI (5831) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (5841) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (5841) Main: Finished status: 0[0m
+---------- Beggining operation 3 ----------I (5841) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (5861) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (5871) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (6531) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (6531) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (6531) CryptoApiCommons: gen_keys clock cycle count: 106283485[0m
+[0;32mI (6541) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (6541) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (6551) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (7221) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (7221) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (7221) CryptoApiCommons: sign clock cycle count: 107085761[0m
+[0;32mI (7221) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (7231) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (7231) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (8521) CryptoApiCommons: [0m
+
+verify time: 1282 ms
+[0;32mI (8521) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (8521) CryptoApiCommons: verify clock cycle count: 205164857[0m
+[0;32mI (8521) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (8531) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (8531) Main: Finished status: 0[0m
+---------- Beggining operation 4 ----------I (8531) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (8551) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (8561) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (9221) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (9221) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (9221) CryptoApiCommons: gen_keys clock cycle count: 106280647[0m
+[0;32mI (9231) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (9231) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (9231) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (9911) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (9911) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (9911) CryptoApiCommons: sign clock cycle count: 107080459[0m
+[0;32mI (9911) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (9921) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (9921) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[1;31mE (10411) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (10411) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (10411) task_wdt: Tasks currently running:[0m
+[1;31mE (10411) task_wdt: CPU 0: main[0m
+[1;31mE (10411) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (10411) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40106516:0x3FFB1040 0x4010692C:0x3FFB1060 0x40082F81:0x3FFB1090 0x401029FF:0x3FFB3F00 0x40102E76:0x3FFB3F20 0x40100E83:0x3FFB3F50 0x401024A9:0x3FFB3F70 0x400E2238:0x3FFB3F90 0x400E312C:0x3FFB3FC0 0x400E32A1:0x3FFB3FE0 0x400E3408:0x3FFB4040 0x400E35EE:0x3FFB40A0 0x400E3B2B:0x3FFB40F0 0x400E3C5C:0x3FFB4160 0x400D8BE5:0x3FFB4190 0x4011F552:0x3FFB41F0 0x400D7F74:0x3FFB4210 0x400D7F9F:0x3FFB4240 0x40122BE3:0x3FFB4260 0x40086985:0x3FFB4290
+
+[0;32mI (11271) CryptoApiCommons: [0m
+
+verify time: 1338 ms
+[0;32mI (11271) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (11271) CryptoApiCommons: verify clock cycle count: 214190209[0m
+[0;32mI (11271) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (11271) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (11281) Main: Finished status: 0[0m
+---------- Beggining operation 5 ----------I (11281) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (11301) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (11301) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (11971) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (11971) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (11971) CryptoApiCommons: gen_keys clock cycle count: 106290895[0m
+[0;32mI (11971) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (11981) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (11981) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (12661) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (12661) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (12661) CryptoApiCommons: sign clock cycle count: 107053991[0m
+[0;32mI (12661) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (12661) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (12671) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (13961) CryptoApiCommons: [0m
+
+verify time: 1283 ms
+[0;32mI (13961) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (13961) CryptoApiCommons: verify clock cycle count: 205162639[0m
+[0;32mI (13961) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (13971) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (13971) Main: Finished status: 0[0m
+---------- Beggining operation 6 ----------I (13971) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (13991) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (13991) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (14661) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (14661) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (14661) CryptoApiCommons: gen_keys clock cycle count: 106282939[0m
+[0;32mI (14661) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (14671) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (14671) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (15351) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (15351) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (15351) CryptoApiCommons: sign clock cycle count: 107100609[0m
+[0;32mI (15351) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (15361) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (15361) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[1;31mE (15411) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (15411) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (15411) task_wdt: Tasks currently running:[0m
+[1;31mE (15411) task_wdt: CPU 0: main[0m
+[1;31mE (15411) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (15411) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40106516:0x3FFB1040 0x4010692C:0x3FFB1060 0x40082F81:0x3FFB1090 0x40082286:0x3FFB3ED0 0x400822FD:0x3FFB3F00 0x40081F88:0x3FFB3F20 0x40087005:0x3FFB3F40 0x401039DF:0x3FFB3F60 0x400E1FA2:0x3FFB3F90 0x400E312C:0x3FFB3FC0 0x400E32A1:0x3FFB3FE0 0x400E3408:0x3FFB4040 0x400E35EE:0x3FFB40A0 0x400E3B2B:0x3FFB40F0 0x400E3C5C:0x3FFB4160 0x400D8BE5:0x3FFB4190 0x4011F552:0x3FFB41F0 0x400D7F74:0x3FFB4210 0x400D7F9F:0x3FFB4240 0x40122BE3:0x3FFB4260 0x40086985:0x3FFB4290
+
+[0;32mI (16711) CryptoApiCommons: [0m
+
+verify time: 1341 ms
+[0;32mI (16711) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (16711) CryptoApiCommons: verify clock cycle count: 214492757[0m
+[0;32mI (16711) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (16721) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (16721) Main: Finished status: 0[0m
+---------- Beggining operation 7 ----------I (16721) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (16741) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (16741) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (17411) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (17411) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (17411) CryptoApiCommons: gen_keys clock cycle count: 106292661[0m
+[0;32mI (17411) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (17421) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (17421) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (18101) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (18101) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (18101) CryptoApiCommons: sign clock cycle count: 107057205[0m
+[0;32mI (18101) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (18111) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (18111) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (19401) CryptoApiCommons: [0m
+
+verify time: 1282 ms
+[0;32mI (19401) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (19401) CryptoApiCommons: verify clock cycle count: 205162417[0m
+[0;32mI (19401) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (19411) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (19411) Main: Finished status: 0[0m
+---------- Beggining operation 8 ----------I (19411) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (19431) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (19441) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (20101) CryptoApiCommons: [0m
+
+gen_keys time: 664 ms
+[0;32mI (20101) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (20101) CryptoApiCommons: gen_keys clock cycle count: 106266113[0m
+[0;32mI (20111) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (20111) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (20121) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[1;31mE (20411) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (20411) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (20411) task_wdt: Tasks currently running:[0m
+[1;31mE (20411) task_wdt: CPU 0: main[0m
+[1;31mE (20411) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (20411) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40106516:0x3FFB1040 0x4010692C:0x3FFB1060 0x40082F81:0x3FFB1090 0x4000BFED:0x3FFB3D50 0x40086D1E:0x3FFB3D60 0x4008A882:0x3FFB3D80 0x4008A8CE:0x3FFB3DA0 0x400821A5:0x3FFB3DC0 0x400822CD:0x3FFB3DE0 0x400822FD:0x3FFB3E10 0x40081F88:0x3FFB3E30 0x40087005:0x3FFB3E50 0x401039DF:0x3FFB3E70 0x400FF845:0x3FFB3EA0 0x400FF96A:0x3FFB3ED0 0x4010246D:0x3FFB3EF0 0x400E207C:0x3FFB3F10 0x400E312C:0x3FFB3F40 0x400E32A1:0x3FFB3F60 0x400E3779:0x3FFB3FC0 0x400E38B6:0x3FFB4020 0x400E39A3:0x3FFB4070 0x400E401A:0x3FFB40C0 0x400E4241:0x3FFB4100 0x400E4360:0x3FFB4180 0x400D8A02:0x3FFB41B0 0x4011F512:0x3FFB41F0 0x400D7F60:0x3FFB4210 0x400D7F9F:0x3FFB4240 0x40122BE3:0x3FFB4260 0x40086985:0x3FFB4290
+
+[0;32mI (20871) CryptoApiCommons: [0m
+
+sign time: 746 ms
+[0;32mI (20871) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (20871) CryptoApiCommons: sign clock cycle count: 119507249[0m
+[0;32mI (20871) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (20881) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (20881) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (22171) CryptoApiCommons: [0m
+
+verify time: 1282 ms
+[0;32mI (22171) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (22171) CryptoApiCommons: verify clock cycle count: 205151757[0m
+[0;32mI (22171) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (22181) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (22181) Main: Finished status: 0[0m
+---------- Beggining operation 9 ----------I (22181) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (22201) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (22201) CryptoApiCommons: SUCCESS AT init[0m
+[0;32mI (22871) CryptoApiCommons: [0m
+
+gen_keys time: 665 ms
+[0;32mI (22871) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (22871) CryptoApiCommons: gen_keys clock cycle count: 106288175[0m
+[0;32mI (22881) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (22881) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (22881) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (23561) CryptoApiCommons: [0m
+
+sign time: 669 ms
+[0;32mI (23561) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (23561) CryptoApiCommons: sign clock cycle count: 107078477[0m
+[0;32mI (23561) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (23571) CryptoApiCommons: [0m
+
+hash_message time: 0 ms
+[0;32mI (23571) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (24861) CryptoApiCommons: [0m
+
+verify time: 1282 ms
+[0;32mI (24861) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (24861) CryptoApiCommons: verify clock cycle count: 205175817[0m
+[0;32mI (24861) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (24871) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (24871) Main: Finished status: 0[0m
+---------- Beggining operation 10 ----------I (24871) CryptoAPI: INITIALIZED LIBRARY [ WOLFSSL ] WITH ALGORITHM [ ECDSA_BP256R1 ] AND HASH [ SHA_512 ]
+[0;32mI (24891) CryptoApiCommons: Partition size: total: 1048576, used: 8192[0m
+[0;32mI (24901) CryptoApiCommons: SUCCESS AT init[0m
+[1;31mE (25411) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (25411) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (25411) task_wdt: Tasks currently running:[0m
+[1;31mE (25411) task_wdt: CPU 0: main[0m
+[1;31mE (25411) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (25411) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40106516:0x3FFB1040 0x4010692C:0x3FFB1060 0x40082F81:0x3FFB1090 0x4008A847:0x3FFB3E20 0x4008A8A2:0x3FFB3E40 0x400821A5:0x3FFB3E60 0x400822CD:0x3FFB3E80 0x400822FD:0x3FFB3EB0 0x40081F88:0x3FFB3ED0 0x40087005:0x3FFB3EF0 0x401039DF:0x3FFB3F10 0x400FF845:0x3FFB3F40 0x400FF96A:0x3FFB3F70 0x4010246D:0x3FFB3F90 0x400E261C:0x3FFB3FB0 0x400E304F:0x3FFB3FF0 0x400E32BD:0x3FFB4020 0x400E3779:0x3FFB4080 0x400E38B6:0x3FFB40E0 0x400E39A3:0x3FFB4130 0x400E39DD:0x3FFB4180 0x400E39F1:0x3FFB41A0 0x400D87E9:0x3FFB41C0 0x4011F48E:0x3FFB41F0 0x400D7F3B:0x3FFB4210 0x400D7F9F:0x3FFB4240 0x40122BE3:0x3FFB4260 0x40086985:0x3FFB4290
+
+[0;32mI (25631) CryptoApiCommons: [0m
+
+gen_keys time: 736 ms
+[0;32mI (25631) CryptoApiCommons: gen_keys memory: 15720 bytes[0m
+[0;32mI (25631) CryptoApiCommons: gen_keys clock cycle count: 117752271[0m
+[0;32mI (25641) CryptoApiCommons: SUCCESS AT gen_keys[0m
+[0;32mI (25641) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (25651) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (26321) CryptoApiCommons: [0m
+
+sign time: 670 ms
+[0;32mI (26321) CryptoApiCommons: sign memory: 20928 bytes[0m
+[0;32mI (26321) CryptoApiCommons: sign clock cycle count: 107093435[0m
+[0;32mI (26331) CryptoApiCommons: SUCCESS AT sign[0m
+[0;32mI (26331) CryptoApiCommons: [0m
+
+hash_message time: 1 ms
+[0;32mI (26341) CryptoApiCommons: hash_message memory: 0 bytes[0m
+[0;32mI (27621) CryptoApiCommons: [0m
+
+verify time: 1283 ms
+[0;32mI (27621) CryptoApiCommons: verify memory: 19776 bytes[0m
+[0;32mI (27621) CryptoApiCommons: verify clock cycle count: 205164727[0m
+[0;32mI (27631) CryptoApiCommons: SUCCESS AT verify[0m
+[0;32mI (27631) WolfsslModule: > wolfssl closed.[0m
+[0;32mI (27631) Main: Finished status: 0[0m
+[0;32mI (27641) main_task: Returned from app_main()[0m

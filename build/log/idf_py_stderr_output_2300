@@ -1,0 +1,139 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40106516: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x4010692c: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40082f81: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/xtensa_vectors.S:1240
+--- 0x40120a47: fp_mul_d at C:/Wolfssl/wolfcrypt/src/tfm.c:533
+--- 0x40100456: fp_div at C:/Wolfssl/wolfcrypt/src/tfm.c:873
+--- 0x401005bc: fp_mod at C:/Wolfssl/wolfcrypt/src/tfm.c:1070
+--- 0x401006d9: mp_mod at C:/Wolfssl/wolfcrypt/src/tfm.c:4752
+--- 0x40102939: esp_get_rinv at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp32_mp.c:1026
+--- 0x40102c59: esp_mp_montgomery_init at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp32_mp.c:1219
+--- 0x40102f6b: esp_mp_mulmod at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp32_mp.c:2056
+--- 0x40100649: mp_mulmod at C:/Wolfssl/wolfcrypt/src/tfm.c:4695
+--- 0x400e2116: _ecc_projective_dbl_point at C:/Wolfssl/wolfcrypt/src/ecc.c:2528
+--- 0x400e312c: ecc_projective_dbl_point_safe at C:/Wolfssl/wolfcrypt/src/ecc.c:8097
+--- 0x400e32a1: ecc_mulmod at C:/Wolfssl/wolfcrypt/src/ecc.c:3244
+--- 0x400e3408: wc_ecc_mulmod_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:3772
+--- 0x400e3609: ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:9041
+--- 0x400e3b2b: wc_ecc_verify_hash_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:9317
+--- 0x400e3c5c: wc_ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:8623
+--- 0x400d8be5: WolfsslModule::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/WolfsslModule.cpp:320
+--- 0x4011f552: CryptoAPI::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/CryptoAPI.cpp:131
+--- 0x400d7f74: perform_tests(Libraries, Algorithms, Hashes, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:94
+--- 0x400d7f9f: app_main at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:27
+--- 0x40122be3: main_task at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x40086985: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40106516: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x4010692c: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40082f81: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/xtensa_vectors.S:1240
+--- 0x401029ff: wait_until_done at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp32_mp.c:808 (discriminator 1)
+--- 0x40102e76: esp_mp_mul at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp32_mp.c:1544
+--- 0x40100e83: fp_sqr at C:/Wolfssl/wolfcrypt/src/tfm.c:3437
+--- 0x401024a9: mp_sqr at C:/Wolfssl/wolfcrypt/src/tfm.c:6098
+--- 0x400e2238: _ecc_projective_dbl_point at C:/Wolfssl/wolfcrypt/src/ecc.c:2597
+--- 0x400e312c: ecc_projective_dbl_point_safe at C:/Wolfssl/wolfcrypt/src/ecc.c:8097
+--- 0x400e32a1: ecc_mulmod at C:/Wolfssl/wolfcrypt/src/ecc.c:3244
+--- 0x400e3408: wc_ecc_mulmod_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:3772
+--- 0x400e35ee: ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:9038
+--- 0x400e3b2b: wc_ecc_verify_hash_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:9317
+--- 0x400e3c5c: wc_ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:8623
+--- 0x400d8be5: WolfsslModule::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/WolfsslModule.cpp:320
+--- 0x4011f552: CryptoAPI::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/CryptoAPI.cpp:131
+--- 0x400d7f74: perform_tests(Libraries, Algorithms, Hashes, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:94
+--- 0x400d7f9f: app_main at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:27
+--- 0x40122be3: main_task at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x40086985: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40106516: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x4010692c: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40082f81: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/xtensa_vectors.S:1240
+--- 0x40082286: get_all_caps at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_private.h:53
+---  (inlined by) heap_caps_aligned_alloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:136
+--- 0x400822fd: heap_caps_malloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:176
+--- 0x40081f88: heap_caps_malloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps.c:84
+--- 0x40087005: pvPortMalloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/heap_idf.c:55
+--- 0x401039df: wc_debug_pvPortMalloc at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp_sdk_mem_lib.c:295
+--- 0x400e1fa2: _ecc_projective_dbl_point at C:/Wolfssl/wolfcrypt/src/ecc.c:2391
+--- 0x400e312c: ecc_projective_dbl_point_safe at C:/Wolfssl/wolfcrypt/src/ecc.c:8097
+--- 0x400e32a1: ecc_mulmod at C:/Wolfssl/wolfcrypt/src/ecc.c:3244
+--- 0x400e3408: wc_ecc_mulmod_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:3772
+--- 0x400e35ee: ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:9038
+--- 0x400e3b2b: wc_ecc_verify_hash_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:9317
+--- 0x400e3c5c: wc_ecc_verify_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:8623
+--- 0x400d8be5: WolfsslModule::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/WolfsslModule.cpp:320
+--- 0x4011f552: CryptoAPI::verify(unsigned char const*, unsigned int, unsigned char*, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/CryptoAPI.cpp:131
+--- 0x400d7f74: perform_tests(Libraries, Algorithms, Hashes, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:94
+--- 0x400d7f9f: app_main at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:27
+--- 0x40122be3: main_task at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x40086985: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40106516: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x4010692c: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40082f81: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/xtensa_vectors.S:1240
+--- 0x4000bfed: _xtos_set_intlevel in ROM
+--- 0x40086d1e: vPortClearInterruptMaskFromISR at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+---  (inlined by) vPortExitCritical at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+--- 0x4008a882: vPortExitCriticalSafe at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:596
+---  (inlined by) multi_heap_internal_unlock at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/multi_heap.c:169
+--- 0x4008a8ce: multi_heap_malloc_impl at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/multi_heap.c:217
+--- 0x400821a5: aligned_or_unaligned_alloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:82
+--- 0x400822cd: heap_caps_aligned_alloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:156
+--- 0x400822fd: heap_caps_malloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:176
+--- 0x40081f88: heap_caps_malloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps.c:84
+--- 0x40087005: pvPortMalloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/heap_idf.c:55
+--- 0x401039df: wc_debug_pvPortMalloc at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp_sdk_mem_lib.c:295
+--- 0x400ff845: fp_montgomery_reduce_ex at C:/Wolfssl/wolfcrypt/src/tfm.c:3949
+--- 0x400ff96a: fp_montgomery_reduce at C:/Wolfssl/wolfcrypt/src/tfm.c:4040
+--- 0x4010246d: mp_montgomery_reduce at C:/Wolfssl/wolfcrypt/src/tfm.c:6078
+--- 0x400e207c: _ecc_projective_dbl_point at C:/Wolfssl/wolfcrypt/src/ecc.c:2495
+--- 0x400e312c: ecc_projective_dbl_point_safe at C:/Wolfssl/wolfcrypt/src/ecc.c:8097
+--- 0x400e32a1: ecc_mulmod at C:/Wolfssl/wolfcrypt/src/ecc.c:3244
+--- 0x400e3779: wc_ecc_mulmod_ex2 at C:/Wolfssl/wolfcrypt/src/ecc.c:3983
+--- 0x400e38b6: ecc_make_pub_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:5531
+--- 0x400e39a3: _ecc_make_key_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:5995
+--- 0x400e401a: ecc_sign_hash_sw at C:/Wolfssl/wolfcrypt/src/ecc.c:7009
+--- 0x400e4241: wc_ecc_sign_hash_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:7476
+--- 0x400e4360: wc_ecc_sign_hash at C:/Wolfssl/wolfcrypt/src/ecc.c:6797
+--- 0x400d8a02: WolfsslModule::sign(unsigned char const*, unsigned int, unsigned char*, unsigned int*) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/WolfsslModule.cpp:226
+--- 0x4011f512: CryptoAPI::sign(unsigned char const*, unsigned int, unsigned char*, unsigned int*) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/CryptoAPI.cpp:116
+--- 0x400d7f60: perform_tests(Libraries, Algorithms, Hashes, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:85
+--- 0x400d7f9f: app_main at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:27
+--- 0x40122be3: main_task at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x40086985: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40106516: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:434
+--- 0x4010692c: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/task_wdt/task_wdt.c:507
+--- 0x40082f81: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/xtensa_vectors.S:1240
+--- 0x4008a847: multi_heap_internal_lock at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/multi_heap.c:164
+--- 0x4008a8a2: multi_heap_malloc_impl at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/multi_heap.c:208
+--- 0x400821a5: aligned_or_unaligned_alloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:82
+--- 0x400822cd: heap_caps_aligned_alloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:156
+--- 0x400822fd: heap_caps_malloc_base at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps_base.c:176
+--- 0x40081f88: heap_caps_malloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/heap_caps.c:84
+--- 0x40087005: pvPortMalloc at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/heap_idf.c:55
+--- 0x401039df: wc_debug_pvPortMalloc at C:/Wolfssl/wolfcrypt/src/port/Espressif/esp_sdk_mem_lib.c:295
+--- 0x400ff845: fp_montgomery_reduce_ex at C:/Wolfssl/wolfcrypt/src/tfm.c:3949
+--- 0x400ff96a: fp_montgomery_reduce at C:/Wolfssl/wolfcrypt/src/tfm.c:4040
+--- 0x4010246d: mp_montgomery_reduce at C:/Wolfssl/wolfcrypt/src/tfm.c:6078
+--- 0x400e261c: _ecc_projective_add_point at C:/Wolfssl/wolfcrypt/src/ecc.c:2228
+--- 0x400e304f: ecc_projective_add_point_safe at C:/Wolfssl/wolfcrypt/src/ecc.c:8049
+--- 0x400e32bd: ecc_mulmod at C:/Wolfssl/wolfcrypt/src/ecc.c:3246
+--- 0x400e3779: wc_ecc_mulmod_ex2 at C:/Wolfssl/wolfcrypt/src/ecc.c:3983
+--- 0x400e38b6: ecc_make_pub_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:5531
+--- 0x400e39a3: _ecc_make_key_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:5995
+--- 0x400e39dd: wc_ecc_make_key_ex2 at C:/Wolfssl/wolfcrypt/src/ecc.c:6049
+--- 0x400e39f1: wc_ecc_make_key_ex at C:/Wolfssl/wolfcrypt/src/ecc.c:6074
+--- 0x400d87e9: WolfsslModule::gen_keys() at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/WolfsslModule.cpp:119
+--- 0x4011f48e: CryptoAPI::gen_keys() at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/components/CryptoAPI/src/CryptoAPI.cpp:81
+--- 0x400d7f3b: perform_tests(Libraries, Algorithms, Hashes, unsigned int) at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:46
+--- 0x400d7f9f: app_main at C:/Users/thoma/Documents/Codigos/Projeto_IoT/esp32-crypto-api-main/main/main.cpp:27
+--- 0x40122be3: main_task at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/app_startup.c:208
+--- 0x40086985: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

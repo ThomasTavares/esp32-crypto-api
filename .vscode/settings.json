@@ -40,5 +40,5 @@
         "memory": "c",
         "variant": "c"
     },
-    "idf.flashType": "UART"
+    "idf.flashType": "UART",
 }

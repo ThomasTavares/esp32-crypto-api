@@ -224,8 +224,8 @@ int MbedtlsModule::hash_message(const unsigned char *message, size_t message_len
     return mbedtls_sha256(message, message_length, hash, 0);
   case Hashes::MY_SHA_512:
     return mbedtls_sha512(message, message_length, hash, 0);
-  case Hashes::MY_SHA3_256:
-    return mbedtls_sha3(MBEDTLS_SHA3_256, message, message_length, hash, 32);
+  //case Hashes::MY_SHA3_256:
+    //return mbedtls_sha3(MBEDTLS_SHA3_256, message, message_length, hash, 32);
   default:
     return mbedtls_sha256(message, message_length, hash, 0);
   }
