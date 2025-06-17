@@ -7,7 +7,8 @@
         "IDF_CCACHE_ENABLE": "1",
         "ESP_ROM_ELF_DIR": "C:\\Espressif\\tools\\esp-rom-elfs\\20240305/"
     },
-    "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.3.1/",
+    "idf.espIdfPath": "C:/Espressif/frameworks/esp-idf-v5.4.1",
+    "idf.espIdfPathWin": "C:/Espressif/frameworks/esp-idf-v5.4.1",
     "idf.openOcdConfigs": [
         "board/esp32-wrover-kit-3.3v.cfg"
     ],
