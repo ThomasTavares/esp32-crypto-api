@@ -45,8 +45,8 @@ endif()
 
 ## register_component()
 idf_component_register(SRCS main.cpp
-                       INCLUDE_DIRS "."
-                                    )
+                    INCLUDE_DIRS "."
+                    REQUIRES cose CryptoAPI)
 
 #
 # LIBWOLFSSL_SAVE_INFO(VAR_OUPUT THIS_VAR VAR_RESULT)
