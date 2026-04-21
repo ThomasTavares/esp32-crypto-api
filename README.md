@@ -1,38 +1,28 @@
-# Crypto API
+# ESP32 Crypto API - COSE Extension
 
-Code for my final university project/thesis titled "Digital Certification in IoT Devices."
+This repository is a fork of the `esp32-crypto-api` project, extended to support the CBOR Object Signing and Encryption (COSE) standard. The primary addition is the `CoseCrypto` component, which enables secure messaging for IoT devices using standardized structures.
 
-## Goal
+## New Features: CoseCrypto Class
 
-This project aims to provide a quick way to benchmark between the most popular and high-rated cryptography libraries available to ESP32. The main focus is in digital signatures and certifications.
+The `CoseCrypto` class provides a simplified interface for common COSE operations, utilizing MbedTLS and tinyCBOR for the underlying cryptographic and encoding logic.
 
-## Requirements
+* **COSE\_Encrypt0**: Support for authenticated encryption using AES-256-GCM.
+    * `encrypt()`: Encrypts plaintext and formats it as a `COSE_Encrypt0` message with random IV generation.
+    * `decrypt()`: Validates and decrypts incoming `COSE_Encrypt0` messages.
+* **COSE\_Sign1**: Support for digital signatures using ECDSA with the NIST P-256 curve (ES256).
+    * `sign()`: Signs a payload and formats it into a `COSE_Sign1` structure.
+    * `verify()`: Reconstructs the signature structure to verify the authenticity of a `COSE_Sign1` message.
+* **Utility**:
+    * `generate_test_keypair()`: Generates mathematically valid P-256 keypairs for testing and development.
 
-- ESP-IDF: This project uses the ESP-IDF framework, so you'll need ESP-IDF installed and configured on your machine (follow the instructions on [ESP-IDF official documentation](https://docs.espressif.com/projects/esp-idf/en/v5.3.1/esp32/get-started/index.html) on how to do it)
-- VSCode: Although it is possible to execute this project without VSCode, it is highly recommended that you do use VSCode, due to it's ease of use.
-- WolfSSL: This project uses wolfssl, but in it's source code needs to be outside of it. Follow the instructions below on how to do it.
+## Requirements & Dependencies
 
-## Setting up WolfSSL
+This fork maintains the core requirements of the original project while introducing new component dependencies:
 
-1) Download the WolfSSL source code from it's [GitHub page (v5.7.4-stable)](https://github.com/wolfSSL/wolfssl/releases/tag/v5.7.4-stable);
-2) Unzip the downloaded zip file, and move it to your desired location (ex: ```C:/wolfssl-source```);
-3) Create a system-wide environment variable called ```WOLFSSL_ROOT```, pointing to the location of the wolfssl source code (ex: ```C:/wolfssl-source```);
-4) Restart your machine;
-5) After these steps, when compiling the project, it should be able to automatically detect the wolfssl folder and use it to generate the builder folder.
+* **ESP-IDF**: Developed and tested for the ESP-IDF framework.
+* **MbedTLS**: Used for AES-GCM and ECDSA cryptographic operations.
+* **tinyCBOR**: Integrated via the `espressif__cbor` managed component for processing COSE structures.
 
-## Choosing which library and algorithm to use
+## Original Project
 
-In the main.cpp file, there's a call to a function named "perform_tests". This function is used for testing purposes, and it's parameters enable you to choose which library, signature algorithm and hash algorithm to use. Change them as you like.
-
-## Running the project
-
-First of all, make sure your esp32 device is connected to your mahcine. Then open the ```ESP-IDF PowerShell``` or ```ESP-IDF CMD``` that was installed when you installed ESP-IDF, and navigate to project root folder (ex: ```cd <path-to-project>/esp32-crypto-api```).
-
-The project already has a build folder, so you can try simply running the project with ```idf.py flash``` and then ```idf.py monitor``` to flash the project to your device and start monitoring it. However, if this fails for some reason, delete the build folder, and execute the following commands:
-
-1) ```idf.py set-target esp32```
-2) ```idf.py build``` (alternatively, if using VSCode, ```CTRL + SHIFT + P``` and select ```ESP-IDF: Build your project```
-3) ```idf.py flash``` (alternatively, if using VSCode, ```CTRL + SHIFT + P``` and select ```ESP-IDF: Flash your project```
-4) ```idf.py monitor``` (alternatively, if using VSCode, ```CTRL + SHIFT + P``` and select ```ESP-IDF: Monitor device```
-
-After this, the project should be up and running on your device.
+For information regarding the original project's benchmarking goals, core cryptography library comparisons (WolfSSL, Micro-ecc), and initial setup instructions, please refer to the original repository by **bristotgl**.
