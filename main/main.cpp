@@ -55,6 +55,7 @@ void cose_test() {
     vector<uint8_t> parsed_string(message, message + (sizeof(message) / sizeof(message[0])));
 
     ESP_LOGI(TAG, "Original Plaintext: %s", message);
+    ESP_LOGI(TAG, "Plaintext Length: %d bytes", parsed_string.size());
     ESP_LOGI(TAG, "Symmetric Key Length: %d bytes", sym_key.size());
 
     // Encryption Test
