@@ -79,9 +79,7 @@ void cose_test() {
     }
 
     if (parsed_string == decrypted_payload) {
-        ESP_LOGI(TAG, "----------------------------------------");
         ESP_LOGI(TAG, "ENCRYPT TEST PASSED: Data matches perfectly.");
-        ESP_LOGI(TAG, "----------------------------------------");
     } else {
         ESP_LOGE(TAG, "ENCRYPT TEST FAILED: Data mismatch.");
     }
@@ -122,9 +120,7 @@ void cose_test() {
     }
 
     if (parsed_string == verified_payload) {
-        ESP_LOGI(TAG, "----------------------------------------");
         ESP_LOGI(TAG, "SIGN TEST PASSED: Signature verified & payload matches.");
-        ESP_LOGI(TAG, "----------------------------------------");
     } else {
         ESP_LOGE(TAG, "SIGN TEST FAILED: Payload mismatch after verification.");
     }
