@@ -127,7 +127,7 @@ void cose_test() {
     }
 }
 
-int perform_tests(Libraries library, Algorithms algorithm, Hashes hash, size_t shake_256_length)
+/* int perform_tests(Libraries library, Algorithms algorithm, Hashes hash, size_t shake_256_length)
 {
     int ret = crypto_api.init(library, algorithm, hash, shake_256_length);
     if (ret != 0)
@@ -232,4 +232,4 @@ int perform_tests(Libraries library, Algorithms algorithm, Hashes hash, size_t s
     // free(loaded_signature);
 
     return 0;
-}
+} */
